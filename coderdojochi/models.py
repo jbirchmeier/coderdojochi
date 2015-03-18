@@ -208,7 +208,7 @@ class Session(models.Model):
     announced_date = models.DateTimeField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    image_url = models.CharField(max_length=255, blank=True, null=True)
+    image_url = models.ImageField(upload_to='sesssion_cover')
     mentors_week_reminder_sent = models.BooleanField(default=False)
     mentors_day_reminder_sent = models.BooleanField(default=False)
 
