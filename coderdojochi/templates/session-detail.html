@@ -198,8 +198,9 @@
                 {% endif %}
             </div>
             <div class="sidebar-right-section center-block">
+                <p><small>Discounted parking is available from our friends at SpotHero. Select a green pin below and use promo code <strong>CODERDOJOCHI</strong> at checkout.</small></p>
                 <div class="map">
-                    <a target="_blank" class="static-map" href="//www.google.com/maps/preview?q={{ session.location.name }} {{ session.location.address }} {{ session.location.address2 }} {{ session.location.city }}, {{ session.location.state }} {{ session.location.zip }}"><img src="http://maps.google.com/maps/api/staticmap?markers=location:{{ session.location.name }} {{ session.location.address }} {{ session.location.address2 }} {{ session.location.city }}, {{ session.location.state }} {{ session.location.zip }}&amp;center={{ session.location.name }} {{ session.location.address }} {{ session.location.address2 }} {{ session.location.city }}, {{ session.location.state }} {{ session.location.zip }}&amp;size=281x281&amp;sensor=false&amp;zoom=15"></a>
+                    <iframe frameborder="0" height="281px" width="281px" src="//spothero.com/static/main/widget.html?latitude={{ session.location.latitude }}&longitude={{ session.location.longitude }}&destinationTitle={{ session.location.name|escape }}&startDate={{ session.start_date|date:"m-d-Y" }}&startTime={{ session.start_time|date:"g:iA" }}&endDate={{ session.end_date|date:"m-d-Y" }}&endTime={{ session.end_time|date:"g:iA" }}&referrer=CODERDOJOCHI&zoom=15"></iframe>
                 </div>
             </div>
             <div class="sidebar-right-section center-block">
